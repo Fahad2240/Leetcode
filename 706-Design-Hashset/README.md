@@ -1,3 +1,5 @@
+706.Design Hashset
+
 Design a HashSet without using any built-in hash table libraries.
 
 Implement MyHashSet class:
