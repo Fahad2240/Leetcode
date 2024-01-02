@@ -1,13 +1,8 @@
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        sum=0
-        maxi=0
-        for x in nums:
-            sum+=x
-            if sum<0:
-                sum=0
-            maxi=max(maxi,sum)
-        if maxi==0:
-            maxi=max(nums)
-        return maxi
-        # return 0
+        max_glob=max_c=nums[0]
+        for x in range(1,len(nums)):
+            max_c=max(nums[x],max_c+nums[x])
+            if max_c>max_glob:
+                max_glob=max_c
+        return max_glob
